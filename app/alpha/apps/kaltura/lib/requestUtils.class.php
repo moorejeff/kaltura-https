@@ -66,7 +66,7 @@ class requestUtils
 		return $url;
 	}
 	
-	public static function getCdnHost ($protocol = 'http')
+	public static function getCdnHost ($protocol = 'https')
 	{
 		return "$protocol://".kConf::get("cdn_host");
 	}
