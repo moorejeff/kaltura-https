@@ -412,7 +412,7 @@ $(function(){
 //				wmode				: "opaque"
 			},
 			flashvars : {
-				protocol			: 'https://'
+				protocol			: 'https://',
 				host				: kmc.vars.host,
 				cdnhost				: kmc.vars.cdn_host,
 				srvurl				: "api_v3/index.php",
