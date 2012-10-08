@@ -363,7 +363,7 @@ class myPartnerUtils
 	}
 	
 	
-	public static function getCdnHost ( $partner_id, $protocol = 'http' )
+	public static function getCdnHost ( $partner_id, $protocol = 'https' )
 	{
 		$partner = PartnerPeer::retrieveByPK( $partner_id );
 		if ( !$partner || (! $partner->getCdnHost() ) ) return requestUtils::getCdnHost($protocol);
@@ -382,7 +382,7 @@ class myPartnerUtils
 	}
 	
 	// if the iis Host of the partner is false or null or an empty string - ignore it	
-	public static function getIisHost ( $partner_id, $protocol = 'http' )
+	public static function getIisHost ( $partner_id, $protocol = 'https' )
 	{
 		$partner = PartnerPeer::retrieveByPK( $partner_id );
 		if ( !$partner || (! $partner->getIisHost() ) ) return requestUtils::getIisHost($protocol);
