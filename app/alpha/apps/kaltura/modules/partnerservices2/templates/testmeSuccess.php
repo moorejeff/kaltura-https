@@ -3,7 +3,7 @@
 define ( 'TESTME_GROUP_START' , 'TESTME_GROUP_START' );
 define ( 'TESTME_GROUP_END' , 'TESTME_GROUP_END' );
 
-$SERVICE_URL = "http://localhost/kaltura_dev.php/partnerservices2/";
+$SERVICE_URL = "https://localhost/kaltura_dev.php/partnerservices2/";
 
 function getLimited()
 {
@@ -41,7 +41,7 @@ function createSelect ( $id , $name , $default_value , $list_name , $pid_str = n
 	if( !$limited )								
 		$media_source_list = array ( "25" => "KalturaQa") + $media_source_list ;									
 
-	$current_server = str_replace("http://", "", requestUtils::getRequestHost());
+	$current_server = str_replace("https://", "", requestUtils::getRequestHost());
 	$service_url_list[$current_server] = $current_server;
 		
 	if( $limited )

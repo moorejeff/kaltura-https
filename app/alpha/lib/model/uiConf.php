@@ -463,7 +463,7 @@ class uiConf extends BaseuiConf implements ISyncableFile
 			return 	$raw;
 		}
 		
-		if ( strpos ( $raw , "http://" ) === 0 )
+		if ( strpos ( $raw , "http://" ) === 0 OR strpos ( $raw , "https://" ) === 0 )
 		{
 			// if the raw url starts with http - don't append to it
 			return 	$raw;

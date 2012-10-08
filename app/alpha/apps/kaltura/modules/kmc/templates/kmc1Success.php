@@ -3,9 +3,9 @@
 
 $jw_license = ($jw_license)? "licensed": "non-commercial";
 $service_url = myPartnerUtils::getHost($partner_id);
-$host = str_replace ( "http://" , "" , $service_url );
+$host = str_replace ( "https://" , "" , $service_url );
 $cdn_url = myPartnerUtils::getCdnHost($partner_id);
-$cdn_host = str_replace ( "http://" , "" , $cdn_url );
+$cdn_host = str_replace ( "https://" , "" , $cdn_url );
 
 $cache_st = "cache_st/".(time()+ 15 * 60);
 
@@ -748,11 +748,11 @@ function doJwPreviewEmbed(entry_id, jw_skin, jw_width, jw_height, jw_share, jw_f
 	var jw_plugins =  new Array();
 
 	if(!is_playlist || is_playlist == "undefined") {
-		jw_flashvars += 'file=http://<?php echo $cdn_host ?>/p/' + partner_id + '/sp/' + partner_id + '00/flvclipper/entry_id/' + entry_id + '/version/100000/.flv';
+		jw_flashvars += 'file=https://<?php echo $cdn_host ?>/p/' + partner_id + '/sp/' + partner_id + '00/flvclipper/entry_id/' + entry_id + '/version/100000/.flv';
 		jw_plugins.push("kalturastats");
 	}
 	else {
-		jw_flashvars += 'file=http://<?php echo $cdn_host ?>/index.php/partnerservices2/executeplaylist%3Fuid%3D%26format%3D8%26playlist_id%3D' + entry_id +
+		jw_flashvars += 'file=https://<?php echo $cdn_host ?>/index.php/partnerservices2/executeplaylist%3Fuid%3D%26format%3D8%26playlist_id%3D' + entry_id +
 						'%26partner_id%3D' + partner_id + '%26subp_id%3D' + partner_id + '00%26ks%3D%7Bks%7D';
 		jw_flashvars += '&playlist=' + jw_playlistType;
 		if(jw_playlistType != "bottom") {
@@ -787,19 +787,19 @@ function doJwPreviewEmbed(entry_id, jw_skin, jw_width, jw_height, jw_share, jw_f
 	}
 /* end AdSolution */
 
-	jw_skin = (jw_skin == "undefined" ||jw_skin == "") ? '' : '&skin=http://<?php echo $cdn_host ?>/flash/jw/skins/' + jw_skin;
+	jw_skin = (jw_skin == "undefined" ||jw_skin == "") ? '' : '&skin=https://<?php echo $cdn_host ?>/flash/jw/skins/' + jw_skin;
 
 	jw_flashvars =  jw_flashvars +
-					'&amp;image=http://<?php echo $cdn_host ?>/p/' + partner_id + '/sp/' + partner_id + '00/thumbnail/entry_id/' + entry_id + '/width/640/height/480' +
+					'&amp;image=https://<?php echo $cdn_host ?>/p/' + partner_id + '/sp/' + partner_id + '00/thumbnail/entry_id/' + entry_id + '/width/640/height/480' +
 					jw_skin + '&widgetId=jw00000001&entryId=' + entry_id + '&partnerId=' + partner_id + '&uiconfId=' + ui_conf_id + '&plugins=' + jw_plugins;
 
 	jw_embed_code = '<div id="jw_wrap_' + jw_uid + '"> <object width="' + jw_width + '" height="' + jw_height + '" id="jw_player_' + jw_uid +
 					'" name="jw_player_' + jw_uid + '">' +
-					' <param name="movie" value="http://<?php echo $cdn_host ?>/flash/jw/player/' + jw_swf + '" />' +
+					' <param name="movie" value="https://<?php echo $cdn_host ?>/flash/jw/player/' + jw_swf + '" />' +
 					' <param name="wmode" value="transparent" />' +
 					' <param name="allowScriptAccess" value="always" />' +
 					' <param name="flashvars" value="' + jw_flashvars + '" />' +
-					' <embed id="jw_player__' + jw_uid + '" name="jw_player__' + jw_uid + '" src="http://<?php echo $cdn_host ?>/flash/jw/player/' + jw_swf +
+					' <embed id="jw_player__' + jw_uid + '" name="jw_player__' + jw_uid + '" src="https://<?php echo $cdn_host ?>/flash/jw/player/' + jw_swf +
 					'" width="' + jw_width + '" height="' + jw_height + '" allowfullscreen="true" wmode="transparent" allowscriptaccess="always"' +
 					'flashvars="' + jw_flashvars + '" /> <noembed><a href="http://www.kaltura.org/">Open Source Video</a></noembed> </object> </div>';
 

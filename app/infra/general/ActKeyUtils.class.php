@@ -141,7 +141,7 @@ class ActKeyUtils
 		$cur_key = kConf::get('kaltura_activation_key');
 		if ($cur_key == false) {
 			$not_activated_msg = "Thank you for using the Kaltura On-Prem Video Platform.\n
-To start your evaluation please activate your evaluation package from within the \"http://".kConf::get('apphome_url_no_protocol')."/start page\".<br/>
+To start your evaluation please activate your evaluation package from within the \"https://".kConf::get('apphome_url_no_protocol')."/start page\".<br/>
 For support, please contact the Kaltura technical presales team.";
 			die($not_activated_msg);
 		}

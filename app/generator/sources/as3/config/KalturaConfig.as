@@ -7,7 +7,7 @@ package com.kaltura.config
 		protected var _partnerId:String; 
 		protected var _ks:String;
 		protected var _clientTag:String;
-		protected var _protocol:String = "http://";
+		protected var _protocol:String = "https://";
 		protected var _domain : String = "www.kaltura.com";
 		protected var _srvUrl:String = "/api_v3/index.php"; //will be defined by the genertor
 		protected var _ignoreNull : int = 1;

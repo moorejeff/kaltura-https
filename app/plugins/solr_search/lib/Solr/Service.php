@@ -283,7 +283,7 @@ class Apache_Solr_Service
 			$queryString = '';
 		}
 
-		return 'http://' . $this->_host . ':' . $this->_port . $this->_path . $servlet . $queryString;
+		return 'https://' . $this->_host . ':' . $this->_port . $this->_path . $servlet . $queryString;
 	}
 
 	/**

@@ -1,6 +1,6 @@
 <?php
 $service_url = requestUtils::getHost();
-$host = str_replace ( "http://" , "" , $service_url );
+$host = str_replace ( "https://" , "" , $service_url );
 if ( $host == "www.kaltura.com" ) $host = "1";
 
 $www_host = kConf::get('www_host');

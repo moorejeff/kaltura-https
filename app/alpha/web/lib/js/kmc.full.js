@@ -449,7 +449,7 @@ $(function(){
 				inapplicationstudio : "true",
 				kdpUrl				: kmc.vars.flash_dir + "/kdp3/v3.1.6/kdp3.swf",
 				servicesPath		: "index.php/partnerservices2/",
-				serverPath			: "http://"+kmc.vars.host,
+				serverPath			: "https://"+kmc.vars.host,
 				partner_id			: kmc.vars.partner_id,
 				subp_id				: kmc.vars.subp_id //,
 //				widget_id			: "_" + kmc.vars.partner_id
@@ -618,10 +618,10 @@ $(function(){
 		// eventually replace with <? php echo $embedCodeTemplate; ?>  ;  (variables used: HEIGHT WIDTH HOST CACHE_ST UICONF_ID PARTNER_ID PLAYLIST_ID ENTRY_ID)
 		embed_code_template :	{
 			object_tag :	'<object id="kaltura_player" name="kaltura_player" type="application/x-shockwave-flash" allowFullScreen="true" allowNetworking="all" ' +
-							'allowScriptAccess="always" height="{HEIGHT}" width="{WIDTH}" data="http://{HOST}/index.php/kwidget/cache_st/' +
+							'allowScriptAccess="always" height="{HEIGHT}" width="{WIDTH}" data="https://{HOST}/index.php/kwidget/cache_st/' +
 							'{CACHE_ST}/wid/_{PARTNER_ID}/uiconf_id/{UICONF_ID}{ENTRY_ID}"><param name="allowFullScreen" value="true" />' +
 							'<param name="allowNetworking" value="all" /><param name="allowScriptAccess" value="always" /><param name="bgcolor" ' +
-							'value="#000000" /><param name="flashVars" value="{FLASHVARS}&{FLAVOR}" /><param name="movie" value="http://{HOST}/index.php/kwidget/cache_st/' +
+							'value="#000000" /><param name="flashVars" value="{FLASHVARS}&{FLAVOR}" /><param name="movie" value="https://{HOST}/index.php/kwidget/cache_st/' +
 							'{CACHE_ST}/wid/_{PARTNER_ID}/uiconf_id/{UICONF_ID}{ENTRY_ID}" /><a href="http://corp.kaltura.com">' +
 							'video platform</a> <a href="http://corp.kaltura.com/technology/video_management">video management</a> <a href="' +
 							'http://corp.kaltura.com/solutions/overview">video solutions</a> <a href="http://corp.kaltura.com/technology/' +
@@ -838,12 +838,12 @@ layoutId=playlistLight&
 				var jw_plugins =  new Array();
 
 				if(!is_playlist || is_playlist == "undefined") {
-					jw_flashvars += 'file=http://' + kmc.vars.cdn_host + '/p/' + kmc.vars.partner_id + '/sp/' + kmc.vars.partner_id +
+					jw_flashvars += 'file=https://' + kmc.vars.cdn_host + '/p/' + kmc.vars.partner_id + '/sp/' + kmc.vars.partner_id +
 									'00/flvclipper/entry_id/' + entry_id + '/version/100000/ext/flv';
 					jw_plugins.push("kalturastats");
 				}
 				else {
-					jw_flashvars += 'file=http://' + kmc.vars.cdn_host + '/index.php/partnerservices2/executeplaylist%3Fuid%3D%26format%3D8%26playlist_id%3D' +
+					jw_flashvars += 'file=https://' + kmc.vars.cdn_host + '/index.php/partnerservices2/executeplaylist%3Fuid%3D%26format%3D8%26playlist_id%3D' +
 									entry_id + '%26partner_id%3D' + kmc.vars.partner_id + '%26subp_id%3D' + kmc.vars.partner_id + '00%26ks%3D%7Bks%7D' +
 									'&playlist=' + playlist_type;
 					if(playlist_type != "bottom") {
@@ -867,20 +867,20 @@ layoutId=playlistLight&
 				}
 			/* end AdSolution */
 
-				var jw_skin = (skin == "undefined" || skin == "") ? '' : '&skin=http://' + kmc.vars.cdn_host + '/flash/jw/skins/' + skin;
+				var jw_skin = (skin == "undefined" || skin == "") ? '' : '&skin=https://' + kmc.vars.cdn_host + '/flash/jw/skins/' + skin;
 
 				jw_flashvars =  jw_flashvars +
-								'&amp;image=http://' + kmc.vars.cdn_host + '/p/' + kmc.vars.partner_id + '/sp/' + kmc.vars.partner_id +
+								'&amp;image=https://' + kmc.vars.cdn_host + '/p/' + kmc.vars.partner_id + '/sp/' + kmc.vars.partner_id +
 								'00/thumbnail/entry_id/' + entry_id + '/width/640/height/480' + jw_skin + '&widgetId=jw00000001&entryId=' +
 								entry_id + '&partnerId=' + kmc.vars.partner_id + '&uiconfId=' + uiconf_id + '&plugins=' + jw_plugins;
 
 				var jw_embed_code = '<div id="jw_wrap_' + unique_id + '"> <object width="' + width + '" height="' + height + '" id="jw_player_' +
 									unique_id + '" name="jw_player_' + unique_id + '">' +
-									' <param name="movie" value="http://' + kmc.vars.cdn_host + '/flash/jw/player/' + kmc.vars.jw_swf + '" />' +
+									' <param name="movie" value="https://' + kmc.vars.cdn_host + '/flash/jw/player/' + kmc.vars.jw_swf + '" />' +
 									' <param name="wmode" value="transparent" />' +
 									' <param name="allowScriptAccess" value="always" />' +
 									' <param name="flashvars" value="' + jw_flashvars + '" />' +
-									' <embed id="jw_player__' + unique_id + '" name="jw_player__' + unique_id + '" src="http://' +
+									' <embed id="jw_player__' + unique_id + '" name="jw_player__' + unique_id + '" src="https://' +
 									kmc.vars.cdn_host + '/flash/jw/player/' + kmc.vars.jw_swf + '" width="' + width + '" height="' + height +
 									'" allowfullscreen="true" wmode="transparent" allowscriptaccess="always" ' + 'flashvars="' + jw_flashvars +
 									'" /> <noembed><a href="http://www.kaltura.org/">Open Source Video</a></noembed> </object> </div>';

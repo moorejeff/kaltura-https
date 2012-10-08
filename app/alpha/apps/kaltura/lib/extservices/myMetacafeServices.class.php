@@ -96,7 +96,7 @@ class myMetacafeServices extends myBaseMediaSource implements IMediaSource
 							'license' => '', 
 							'credit' => $credit,
 							'source_link' => $link,
-							'url' => "http://".kConf::get("www_host")."/index.php/extservices/metacafeRedirect/itemId/".$id
+							'url' => "https://".kConf::get("www_host")."/index.php/extservices/metacafeRedirect/itemId/".$id
 						);
 				}
 									

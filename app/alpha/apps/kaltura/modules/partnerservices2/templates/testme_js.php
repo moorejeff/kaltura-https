@@ -137,7 +137,7 @@ try
 //	jQuery ( "#remote_script" )[0].src = service_url_elem + "/testme.js" ;
 	
 	index_path_elem= jQuery ( "select[@name=index_path]" )[0].value;
-	url = "http://" + service_url_elem + "/" + index_path_elem + "/partnerservices2/" + service_elem;
+	url = "https://" + service_url_elem + "/" + index_path_elem + "/partnerservices2/" + service_elem;
 	updateUrl ( url );
 	form.attr ("action" , url );
 

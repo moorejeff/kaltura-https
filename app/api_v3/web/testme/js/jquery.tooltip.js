@@ -169,7 +169,7 @@
 		
 		// if element has href or src, add and show it, otherwise hide it
 		if( settings(this).showURL && $(this).url() )
-			helper.url.html( $(this).url().replace('http://', '') ).show();
+			helper.url.html( $(this).url().replace(/https?:\/\//, '') ).show();
 		else 
 			helper.url.hide();
 		

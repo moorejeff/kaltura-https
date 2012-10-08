@@ -1,9 +1,9 @@
 <?php
 $jw_license = ($jw_license) ? "licensed" : "non-commercial";
 $service_url = myPartnerUtils::getHost($partner_id);		/*** move to action ***/
-$host = str_replace ( "http://" , "" , $service_url );
+$host = str_replace ( "https://" , "" , $service_url );
 $cdn_url = myPartnerUtils::getCdnHost($partner_id);			/*** move to action ***/
-$cdn_host = str_replace ( "http://" , "" , $cdn_url );
+$cdn_host = str_replace ( "https://" , "" , $cdn_url );
 
 $flash_dir = $cdn_url . myContentStorage::getFSFlashRootPath ();	/*** move to action ***/
 //$allow_reports = false;

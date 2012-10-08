@@ -52,7 +52,7 @@ if ($templateName.$this->viewName == 'kmc1Success')
   $response->addJavascript('/lib/js/kmc1modal');
   $response->addJavascript('/lib/js/common');
   $response->addJavascript('/lib/js/functions.js');
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js');
 }
 else if ($templateName.$this->viewName == 'varpartnerlistSuccess')
 {
@@ -71,7 +71,7 @@ else if ($templateName.$this->viewName == 'varpartnerlistSuccess')
   $response->addJavascript('/lib/js/kmc1modal');
   $response->addJavascript('/lib/js/common');
   $response->addJavascript('/lib/js/functions.js');
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js');
 }
 else if ($templateName.$this->viewName == 'supportSuccess')
 {
@@ -83,7 +83,7 @@ else if ($templateName.$this->viewName == 'supportSuccess')
   $response->addMeta('language', 'en', false, false);
   $response->addMeta('verify-v1', 'JIjZEB+ZCdDyAw49II0fIpcLfFc40M9EzXEY5/Tva68=', false, false);
 
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
 }
 else if ($templateName.$this->viewName == 'helpSuccess')
 {
@@ -110,7 +110,7 @@ else if ($templateName.$this->viewName == 'kmc2helpSuccess')
   $response->addMeta('verify-v1', 'JIjZEB+ZCdDyAw49II0fIpcLfFc40M9EzXEY5/Tva68=', false, false);
 
   $response->addStylesheet('/lib/css/kmc', '', array ());
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
 }
 else
 {
@@ -128,8 +128,8 @@ else
 
   $response->addStylesheet('/lib/css/modal', '', array ());
   $response->addStylesheet('/lib/css/kmc', '', array ());
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js');
-  $response->addJavascript('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js');
+  $response->addJavascript('https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
   $response->addJavascript('/lib/js/modal.js');
   $response->addJavascript('/lib/js/scripts.js');
 }

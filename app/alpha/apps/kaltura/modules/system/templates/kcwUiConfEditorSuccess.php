@@ -1,8 +1,8 @@
 <?php 
 	$kcwEditorVersion = "v1.2.0"; 
-	$kcwBaseUrl = "http://".kConf::get("www_host")."/flash/kcweditor/";
+	$kcwBaseUrl = "https://".kConf::get("www_host")."/flash/kcweditor/";
 ?>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
 
 <div id="kcwEditor"></div>
 <script type="text/javascript">
