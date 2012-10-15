@@ -143,7 +143,7 @@ class viewwidgetAction extends defPartnerservices2Action
 		$WIDGET_HOST = requestUtils::getHost();
 
 		// add the version as an additional parameter
-		$domain = ( $host ? $kaltura_http_protocol . "://" . $host : $WIDGET_HOST );
+		$domain = ( $host ? KALTURA_HTTP_PROTOCOL . "://" . $host : $WIDGET_HOST );
 		$swf_url = "/index.php/extwidget/kwidget/wid/$widget_id/kid/$kshow_id";
 
 		$height = 0;

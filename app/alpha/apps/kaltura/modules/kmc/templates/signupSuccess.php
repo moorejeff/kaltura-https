@@ -1,6 +1,6 @@
 <?php
 $service_url = requestUtils::getRequestHost();
-$host = str_replace ( $kaltura_http_protocol . "://" , "" , $service_url );
+$host = str_replace ( KALTURA_HTTP_PROTOCOL . "://" , "" , $service_url );
 if ( $host == "www.kaltura.com" ) $host = "1";
 $flash_dir = $service_url . myContentStorage::getFSFlashRootPath ();
 ?>

@@ -49,7 +49,7 @@ class KalturaYahooSyndicationFeed extends KalturaBaseSyndicationFeed
             parent::fromObject($source_object);
             if(isset($this->id) && $this->id)
             {
-                $this->feedUrl = $kaltura_http_protocol . '://'.kConf::get('www_host').'/api_v3/getFeed.php?feedId='.$this->id;
+                $this->feedUrl = KALTURA_HTTP_PROTOCOL . '://'.kConf::get('www_host').'/api_v3/getFeed.php?feedId='.$this->id;
             }
         }        
 }

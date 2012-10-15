@@ -211,7 +211,7 @@ class requestUtils
 	
 	public static function getRequestHost()
 	{
-		return $kaltura_http_protocol . "://".kConf::get("www_host");
+		return KALTURA_HTTP_PROTOCOL . "://".kConf::get("www_host");
 	}
 	
 	public static function getRequestHostId()

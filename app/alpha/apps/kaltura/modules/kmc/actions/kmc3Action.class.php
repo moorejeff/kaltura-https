@@ -59,9 +59,9 @@ class kmc3Action extends kalturaAction
 	
 	/** set values for template **/
 	$this->service_url = myPartnerUtils::getHost($this->partner_id);
-	$this->host = str_replace ( $kaltura_http_protocol . "://" , "" , $this->service_url );
+	$this->host = str_replace ( KALTURA_HTTP_PROTOCOL . "://" , "" , $this->service_url );
 	$this->cdn_url = myPartnerUtils::getCdnHost($this->partner_id);
-	$this->cdn_host = str_replace ( $kaltura_http_protocol . "://" , "" , $this->cdn_url );
+	$this->cdn_host = str_replace ( KALTURA_HTTP_PROTOCOL . "://" , "" , $this->cdn_url );
 	$this->rtmp_host = myPartnerUtils::getRtmpUrl($this->partner_id);
 	$this->flash_dir = $this->cdn_url . myContentStorage::getFSFlashRootPath ();
 		
