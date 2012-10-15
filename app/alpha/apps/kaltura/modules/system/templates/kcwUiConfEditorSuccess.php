@@ -1,6 +1,6 @@
 <?php 
 	$kcwEditorVersion = "v1.2.0"; 
-	$kcwBaseUrl = "https://".kConf::get("www_host")."/flash/kcweditor/";
+	$kcwBaseUrl = $kaltura_http_protocol . "://".kConf::get("www_host")."/flash/kcweditor/";
 ?>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js"></script>
 

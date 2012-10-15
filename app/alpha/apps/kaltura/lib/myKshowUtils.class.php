@@ -59,7 +59,7 @@ class myKshowUtils
 
 	    $str = "";//$extra_links ; //"";
 
-	    $external_url = "https://" . @$_SERVER["HTTP_HOST"] ."$root_url";
+	    $external_url = $kaltura_http_protocol . "://" . @$_SERVER["HTTP_HOST"] ."$root_url";
 
 		$share = "TODO" ; //$titleObj->getFullUrl ();
 

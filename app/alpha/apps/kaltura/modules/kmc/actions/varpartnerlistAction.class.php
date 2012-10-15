@@ -44,7 +44,7 @@ class varpartnerlistAction extends kalturaAction
 			$subpid_param_name = 'subp_id';
 		}
 		$kmc2Query = '?'.$partner_id_param_name.'='.$this->me->getId().'&'.$subpid_param_name.'='.($this->me->getId()*100).'&ks='.$_GET['ks'].'&email='.$email.'&screen_name='.$screenName;
-		$this->varKmcUrl = 'https://'.kConf::get('www_host').'/index.php/kmc/kmc'.$this->me->getKmcVersion().$kmc2Query;
+		$this->varKmcUrl = $kaltura_http_protocol . '://'.kConf::get('www_host').'/index.php/kmc/kmc'.$this->me->getKmcVersion().$kmc2Query;
 		foreach($partners as $partner)
 		{
 			$ks = null;
@@ -63,7 +63,7 @@ class varpartnerlistAction extends kalturaAction
 			}
 			$kmc2Query = '?'.$partner_id_param_name.'='.$partner->getId().'&'.$subpid_param_name.'='.($partner->getId()*100).'&ks='.$ks.'&email='.$adminUser_email.'&screen_name=varAdmin';
 			//$kmcLink = url_for('index.php/kmc/kmc2'.$kmc2Query);
-			$kmcLink = 'https://'.kConf::get('www_host').'/index.php/kmc/kmc'.$partner->getKmcVersion().$kmc2Query;
+			$kmcLink = $kaltura_http_protocol . '://'.kConf::get('www_host').'/index.php/kmc/kmc'.$partner->getKmcVersion().$kmc2Query;
 			$this->partners[$partner->getId()] = array(
 				'name' => $partner->getPartnerName(),
 				'kmcLink' => $kmcLink,

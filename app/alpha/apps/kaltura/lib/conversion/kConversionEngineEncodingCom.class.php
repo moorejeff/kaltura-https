@@ -23,7 +23,7 @@ class kConversionEngineEncodingCom  extends kConversionEngineFlix
 		$i_value_end_pos = strpos($exec_cmd, " ", $i_pos_end);
 		$input_file = substr($exec_cmd, $i_pos_end, $i_value_end_pos - $i_pos_end);
 		
-		$new_input_file = "https://".kConf::get("www_host")."/index.php/extwidget/raw/entry_id/".$conv_cmd->entry_id;
+		$new_input_file = $kaltura_http_protocol . "://".kConf::get("www_host")."/index.php/extwidget/raw/entry_id/".$conv_cmd->entry_id;
 		
 		$exec_cmd = str_replace($input_file, $new_input_file, $exec_cmd);
 		$exec_cmd = str_replace(parent::getCmd(), $this->getCmd(), $exec_cmd);

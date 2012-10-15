@@ -283,7 +283,7 @@ class Apache_Solr_Service
 			$queryString = '';
 		}
 
-		return 'https://' . $this->_host . ':' . $this->_port . $this->_path . $servlet . $queryString;
+		return $kaltura_http_protocol . '://' . $this->_host . ':' . $this->_port . $this->_path . $servlet . $queryString;
 	}
 
 	/**

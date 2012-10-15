@@ -14,5 +14,5 @@ define("ADMIN_SECRET", $partner->getAdminSecret());
 if (strpos(kConf::get('www_host'), "http://") === 0 OR strpos(kConf::get('www_host'), "https://") === 0)
 	define("SERVER_URL", kConf::get('www_host'));
 else
-	define("SERVER_URL", "https://".kConf::get('www_host'));
+	define("SERVER_URL", $kaltura_http_protocol . "://".kConf::get('www_host'));
 ?>

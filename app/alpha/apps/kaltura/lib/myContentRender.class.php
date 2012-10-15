@@ -45,7 +45,7 @@ class myContentRender
 			$mediaType == entry::ENTRY_MEDIA_TYPE_VIDEO)
 		{
 			$kmediaType = $mediaType;
-			$kmediaData = "https://".$_SERVER['SERVER_NAME'].$entry->getDataPath();
+			$kmediaData = $kaltura_http_protocol . "://".$_SERVER['SERVER_NAME'].$entry->getDataPath();
 		}
 		else
 		{

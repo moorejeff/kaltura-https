@@ -37,7 +37,7 @@ class kConf
 			
 				"server_api_v2_path" => "/api/" ,
 						
-				"apphome_url" => "https://kaltura-test.swarthmore.edu",
+				"apphome_url" => $kaltura_http_protocol . "://kaltura-test.swarthmore.edu",
 				"apphome_url_no_protocol" => "kaltura-test.swarthmore.edu",
 				"default_email" => "kaltura@swarthmore.edu",
 				"default_email_name" => "kaltura-test.swarthmore.edu Automated Response",
@@ -163,8 +163,8 @@ class kConf
 					"current" => "0",
 					"list" => array (
 								"0" => array ( "name" => "DC_0" ,
-											   "url" => "https://kaltura-test.swarthmore.edu" ,
-											   "external_url" => "https://kaltura-test.swarthmore.edu" ,
+											   "url" => $kaltura_http_protocol . "://kaltura-test.swarthmore.edu" ,
+											   "external_url" => $kaltura_http_protocol . "://kaltura-test.swarthmore.edu" ,
 											   "secret" => "" ,
 											   "root" => "/opt/kaltura/web/" )
 					)

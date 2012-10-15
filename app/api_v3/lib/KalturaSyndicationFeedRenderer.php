@@ -301,7 +301,7 @@ class KalturaSyndicationFeedRenderer implements IKalturaPlaylistUtils
 	private function getPlayerUrl($entryId)
 	{
 		$uiconfId = ($this->syndicationFeed->playerUiconfId)? '/ui_conf_id/'.$this->syndicationFeed->playerUiconfId: '';
-		$url = 'https://'.kConf::get('www_host').
+		$url = $kaltura_http_protocol . '://'.kConf::get('www_host').
 			'/kwidget/wid/_'.$this->syndicationFeed->partnerId.
 			'/entry_id/'.$entryId.$uiconfId;
 		return $url;
