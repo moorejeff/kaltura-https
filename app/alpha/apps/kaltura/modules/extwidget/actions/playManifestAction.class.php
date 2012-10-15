@@ -248,7 +248,8 @@ class playManifestAction extends kalturaAction
 		
 		$url = $this->cdnHost . $url;
 		$url = preg_replace('/^https?:\/\//', '', $url);
-		return $this->protocol . '://' . $url;
+		return KALTURA_HTTP_PROTOCOL . '://' . $url;
+		//return $this->protocol . '://' . $url;
 	}
 	
 	private function serveHttp()
