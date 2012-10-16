@@ -160,7 +160,7 @@ class kwidgetAction extends sfAction
 		$kdata = $widget->getCustomData();
 
 		$partner_host = myPartnerUtils::getHost($widget->getPartnerId());
-		$partner_cdnHost = myPartnerUtils::getCdnHost($widget->getPartnerId());
+		$partner_cdnHost = myPartnerUtils::getCdnHost($widget->getPartnerId(), KALTURA_HTTP_PROTOCOL);
 
 		$host = $partner_host;
 
