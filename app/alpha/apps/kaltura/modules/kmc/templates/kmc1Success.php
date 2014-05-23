@@ -214,7 +214,7 @@ function playerAdded()
 {
 	refreshPlayerList = 1;
 	jQuery.ajax({
-		url: "<? echo url_for('kmc/getuiconfs'); ?>",
+		url: "<?php echo url_for('kmc/getuiconfs'); ?>",
 		type: "POST",
 		data: { "type": "player", "partner_id": partner_id, "ks": ks },
 		dataType: "json",
@@ -611,13 +611,13 @@ function openPlaylist ( embed_code , playlist_id , pl_width_str , pl_height_str 
 	global_embed_code = embed_code;
 	if ( ! ui_conf_id || ui_conf_id == 190 || ui_conf_id == 199 )
 	{
-<?
+<?php
 if (false && kConf::get('www_host') == 'www.kaltura.com'){
 ?>
 		ui_conf_id = 48206;
 		pl_width_str = 660;
 		pl_height_str = 272;
-<?
+<?php
 } else {
 ?>
 		if(sub_nav_tab == "")
@@ -640,11 +640,11 @@ if (false && kConf::get('www_host') == 'www.kaltura.com'){
 		else
 		{
 			// override the default values from the depricated ui_conf
-			ui_conf_id = <? echo $playlist_uiconf_list[0]->getId();  ?>; //48206;
-			pl_width_str = <? echo $playlist_uiconf_list[0]->getWidth();  ?>;// 660;
-			pl_height_str = <? echo $playlist_uiconf_list[0]->getHeight();  ?>;//272;
+			ui_conf_id = <?php echo $playlist_uiconf_list[0]->getId();  ?>; //48206;
+			pl_width_str = <?php echo $playlist_uiconf_list[0]->getWidth();  ?>;// 660;
+			pl_height_str = <?php echo $playlist_uiconf_list[0]->getHeight();  ?>;//272;
 		}
-<?
+<?php
 }
 ?>
 	}
@@ -703,7 +703,7 @@ if (false && kConf::get('www_host') != 'www.kaltura.com'){
 			ui_conf_select += createSelectUiConfAddOption ( ui_conf_id , 48207 ,724,322 , "Horizontal Compact" );
 			ui_conf_select += createSelectUiConfAddOption ( ui_conf_id , 48205 ,400,600 , "Vertical" );
 			ui_conf_select += createSelectUiConfAddOption ( ui_conf_id , 48204 ,400,600 , "Vertical Compact" );
-<?
+<?php
 }
 ?>
 	}
@@ -895,11 +895,11 @@ function openPlayer ( entry_id , pl_width_str , pl_height_str , ui_conf_id  , jw
 		width_str = '400';
 		height_str = '332';
 
-<? 	if (false && kConf::get('www_host') == 'www.kaltura.com') {		?>
+<?php 	if (false && kConf::get('www_host') == 'www.kaltura.com') {		?>
 		width_str = '400';
 		height_str = '332';
 		ui_conf_id = '48110';
-<?	}	else { ?>
+<?php	}	else { ?>
 		// check if the page is now in state where there is a selected_uiconfId
 		if(sub_nav_tab == "Playlist")
 		  selected_uiconfId = null;
@@ -942,7 +942,7 @@ function openPlayer ( entry_id , pl_width_str , pl_height_str , ui_conf_id  , jw
 				height_str = '<?php echo $player_uiconf_list[0]->getHeight(); ?>';
 			}
 		}
-<?	} ?>
+<?php	} ?>
 
 
 	// for now the embed code will be hard-coded
@@ -1009,7 +1009,7 @@ else {
 ?>
 		ui_conf_select += createSelectUiConfAddOption ( ui_conf_id , 48110,400,332 , "Dark player skin" );
 		ui_conf_select += createSelectUiConfAddOption ( ui_conf_id , 48111,400,332 , "Light player skin" );
-<?
+<?php
 }
 ?>
 	}
